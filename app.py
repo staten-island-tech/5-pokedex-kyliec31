@@ -10,23 +10,21 @@ data = json.load(pokedex)
     print(index, ":", pokemon["name"]) """
 # Add a language choice feature and print the pokemons name based on the user input
 """ language_choice = input("Select a language: 1-japanese, 2-english, 3-chinese, 4-french: ")
-if language_choice == "japanese":
-    for index, pokemon in data:
-        print(index, ":", pokemon["name"]["japanese"])
-elif language_choice == "english":
-    for index, pokemon in data:
-        print(index, ":", pokemon["name"]["english"])
-elif language_choice == "chinese":
-    for index, pokemon in data:
-        print(index, ":", pokemon["name"]["chinese"])
-elif language_choice == "french":
-    for index, pokemon in data:
-        print(index, ":", pokemon["name"]["french"]) """
+for index, pokemon in data:
+    if language_choice == "japanese":
+            print(index, ":", pokemon["name"]["japanese"])
+    elif language_choice == "english":
+            print(index, ":", pokemon["name"]["english"])
+    elif language_choice == "chinese":
+            print(index, ":", pokemon["name"]["chinese"])
+    elif language_choice == "french":
+            print(index, ":", pokemon["name"]["french"]) """
 
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
 pokemon_type = input("Choose a pokemon type: ")
 for pokemon in data:
-    pokemon_type[pokemon] == "normal"
+    if pokemon_type[0] == "normal":
+        print(pokemon["type"]["normal"])
 
 
 
